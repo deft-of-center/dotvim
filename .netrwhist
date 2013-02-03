@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/magnum/Projects'
+let g:netrw_dirhist_2='/home/magnum/Projects/CommentsDashboard'
+let g:netrw_dirhist_3='/home/magnum/Projects/CommentsDashboard/app'
+let g:netrw_dirhist_4='/home/magnum/Projects/CommentsDashboard/app/controllers'
+let g:netrw_dirhist_5='/dev/bus/usb/002'
+let g:netrw_dirhist_6='/home/magnum/.oh-my-zsh'
