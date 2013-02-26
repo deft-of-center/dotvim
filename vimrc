@@ -66,6 +66,12 @@ set tabstop=2                     " Global tab width.
 set shiftwidth=2                  " And again, related.
 set expandtab                     " Use spaces instead of tabs
 
+" Folding setup
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=1
+
 set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
@@ -78,6 +84,9 @@ vmap jkjk <ESC>
 
 " Fast saving
 nmap <leader>w :w!<cr>
+
+" for search and replace of highlighted text
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 " center display after searching
 nnoremap n   nzz
@@ -125,6 +134,7 @@ map <C-l> <C-W>l
 " Close the current buffer
 map <leader>bd :bd<cr>
 map <leader>bn :bn<cr>
+map <leader>bp :bp<cr>
 
 " Close all the buffers
 "map <leader>ba :1,1000 bd!<cr>
@@ -144,7 +154,7 @@ map <leader>tm :tabmove<cr>
 map <F9> :e $HOME/.vim/vimrc<CR>
 map <F6> :so $HOME/.vimrc<CR>
 
-nnoremap <Leader>b :<C-U>CtrlPBuffer<CR>
+nnoremap <Leader>B :<C-U>CtrlPBuffer<CR>
 nnoremap <Leader>t :<C-U>CtrlP<CR>
 nnoremap <Leader>T :<C-U>CtrlPTag<CR> 
 
